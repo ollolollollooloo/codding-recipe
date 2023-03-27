@@ -6,8 +6,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function TechCard({data}:any) {
-  const {src,tabname} = data
+export default function TechCard({ data }: any) {
+  const { src, tabname } = data
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -16,15 +16,12 @@ export default function TechCard({data}:any) {
         height="140"
         image={`/images/icons/${src}.png`}
         alt={src}
-        style={{padding:20}}
+        style={{ padding: 20, height: "100%" }}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {/* {src} */}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
         </Typography>
       </CardContent>
       <CardActions>

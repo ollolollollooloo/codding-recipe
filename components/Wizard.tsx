@@ -39,12 +39,12 @@ function a11yProps(index: number) {
 }
 
 
-export default function Wizard({data}: any) {
-  const {tabsdata, stack} = data
+export default function Wizard({ data }: any) {
+  const { tabsdata, stack } = data
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    console.log("new",newValue)
+    console.log("new", newValue)
     setValue(newValue);
   };
 
@@ -64,8 +64,8 @@ export default function Wizard({data}: any) {
         <TabPanel value={value} key={key} index={key}>
           <Grid container spacing={2}>
             {stack[tabname.replace(/\s+/g, '_').toLowerCase()].map((data: any, ke: number) => {
-              return <Grid md={3}>
-                <TechCard key={ke} data={{src:data, tabname}}/>
+              return <Grid md={3} key={`tech-stack-${data}`}>
+                <TechCard data={{ src: data, tabname }} />
               </Grid>
             })}
           </Grid>
