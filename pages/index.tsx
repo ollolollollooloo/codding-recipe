@@ -7,6 +7,8 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+import { Diagram } from '../components';
+
 const fetabs = ['OS', 'Framework', 'State Management', 'Programming Language', 'Package Installation Process', 'Framework in a framework', 'Bundler', 'Containerized', 'Unit Testing', 'CSS Framework', 'Repository']
 
 const festack: any = {
@@ -38,6 +40,11 @@ const Home: NextPage = () => {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg" style={{ paddingTop: 30, paddingBottom: 30 }}>
+        <Grid container spacing={2}>
+          <Grid xs={12} textAlign="center">
+            <Diagram />
+          </Grid>
+        </Grid>
         <Grid container spacing={2}>
           <Grid xs={12} textAlign="center">
             <Typography variant="h6" gutterBottom>
